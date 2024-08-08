@@ -55,6 +55,8 @@ body::before {
     border-radius: 5px;
     padding: 7px;
 }
+
+
 .buttonAceptar{
     border-radius: 11px;
     background: #1875E8;
@@ -135,9 +137,14 @@ body::before {
     gap: 2em;
 }
 
+.container__imagen-persona{
+    width: 40%;
+}
+
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 68px;
+     font-size: 68px; 
+    
     padding-bottom: 3rem;
 }
 
@@ -150,3 +157,18 @@ button {
     font-size: 32px;
     font-weight: 400;
 }
+
+@media (max-width: 600px) {
+    h1 {
+        color: #ffffff;
+        font-size: 40px;
+    }
+    .container__imagen-persona{
+        display:none;
+    }
+  }
+  @media (min-width: 601px) and (max-width: 1024px) {
+    h1{
+        font-size: 40px;
+    }
+  }

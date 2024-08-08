@@ -51,7 +51,7 @@ function generarNumeroSecreto() {
 
 function condicionesIniciales() {
     asignarTextoElemento("h1", "¡Juego del número secreto!");
-    asignarTextoElemento("p", `¡Indica un número del 1 al ${numeroMaximo}!`);
+    asignarTextoElemento("p", `<p style="font-size:30px">¡Indica un número del 1 al ${numeroMaximo}!</p>`);
     obtenerID("inputIntentos").innerHTML = `Ingresar la cantidad maxima de intentos`;
     //generar de nuevo numero aleatorio
     numeroSecreto = generarNumeroSecreto();
@@ -72,7 +72,7 @@ function nuevoJuego() {
 }
 function asignarIntento() {
     nMaxIntento = parseInt(obtenerID("aciertoMaximo").value);
-    obtenerID("inputIntentos").innerHTML = `Guardado con éxito(N° intentos: ${nMaxIntento})`;
+    obtenerID("inputIntentos").innerHTML = `Guardado con éxito (N° intentos: ${nMaxIntento})`;
     obtenerID("inputIntentosError").innerHTML = "";
 }
 
@@ -104,8 +104,8 @@ function verificarIntento() {
             obtenerID("reiniciar").removeAttribute("disabled");
             //  intentoPrincipal();
         } else {
-                numeroDeUsuario > numeroSecreto ? asignarTextoElemento("p",`El numero es menor <br> (N° Intentos: ${nIntentos})`)  
-                : asignarTextoElemento("p",`El numero es mayor <br>  (N° Intentos: ${nIntentos})`);
+                numeroDeUsuario > numeroSecreto ? asignarTextoElemento("p",`<p>El numero es mayor</p> <p style="color:rgb(160, 207, 195);font-size:20px">(Intentos: ${nIntentos}) </p> `)
+                : asignarTextoElemento("p",`<p>El numero es mayor</p> <p style="color:rgb(160, 207, 195); font-size:20px">(Intentos: ${nIntentos}) </p> `);
             //el usuario no acertó
             /*if (numeroDeUsuario > numeroSecreto) {
                 asignarTextoElemento("p",`El numero es menor (N° Intentos: ${nIntentos})`
@@ -114,13 +114,11 @@ function verificarIntento() {
                 asignarTextoElemento("p",`El numero es mayor (N° Intentos: ${nIntentos})`
                 );
             }*/
-
             limpiarInput();
         }
     } else {
-        asignarTextoElemento("p", "Has alcanzado el número máximo de intentos");
+        asignarTextoElemento("p",`<p style="font-size:28px"> "Alcanzaste el número máximo de intentos"</p>`);
         obtenerID("reiniciar").removeAttribute("disabled");
     }
 }
-
 condicionesIniciales();
