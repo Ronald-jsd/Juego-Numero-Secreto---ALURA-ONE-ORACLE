@@ -99,12 +99,12 @@ function verificarIntento() {
 
         if (numeroDeUsuario === numeroSecreto) {
             //el usuario acertó
-            asignarTextoElemento("p",`¡Felicidades, acertaste! <br>  Lo lograste en ${nIntentos} ${valueVeces} `
+            asignarTextoElemento("p",`<p style="color:yellow; font-size:22px">¡Felicidades, acertaste! <br>  Lo lograste en ${nIntentos} ${valueVeces} </p> `
             );
             obtenerID("reiniciar").removeAttribute("disabled");
             //  intentoPrincipal();
         } else {
-                numeroDeUsuario > numeroSecreto ? asignarTextoElemento("p",`<p>El numero es mayor</p> <p style="color:rgb(160, 207, 195);font-size:20px">(Intentos: ${nIntentos}) </p> `)
+                numeroDeUsuario > numeroSecreto ? asignarTextoElemento("p",`<p>El numero es menor</p> <p style="color:rgb(160, 207, 195);font-size:20px">(Intentos: ${nIntentos}) </p> `)
                 : asignarTextoElemento("p",`<p>El numero es mayor</p> <p style="color:rgb(160, 207, 195); font-size:20px">(Intentos: ${nIntentos}) </p> `);
             //el usuario no acertó
             /*if (numeroDeUsuario > numeroSecreto) {

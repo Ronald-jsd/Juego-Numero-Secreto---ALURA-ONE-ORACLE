@@ -160,8 +160,7 @@ button {
 
 @media (max-width: 600px) {
     h1 {
-        color: #ffffff;
-        font-size: 40px;
+        font-size: 38px;
     }
     .container__imagen-persona{
         display:none;
